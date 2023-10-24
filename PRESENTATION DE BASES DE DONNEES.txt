@@ -1,0 +1,135 @@
+                                                                                                           PRESENTATION
+
+                                                                                                       BASE DE DONNEES NOSQL
+
+                                                                                               Qu'est-ce qu'une base de données NoSQL ?
+La base de données NoSQL (Not Only SQL) est un système de base de données non relationnelle. Elle est utilisée pour stocker des données sous une forme non structurée, tout ceci sans toutefois suivre de schémas de construction fixes. Ce système aide à organiser les données de façon libre, sans pour autant respecter la structure contraignante des bases de données relationnelles comme c'est le cas avec le SQL. Il offre donc la possibilité de faciliter le scaling et ne nécessite plus l'utilisation des jointures.
+
+Les bases de données NoSQL sont particulièrement utiles pour les Data Stores distribués qui ont besoin de capacité de stockage élevée. Raison pour laquelle cette solution légère open source est souvent utilisée pour les applications web, mais aussi pour le Big Data en temps réel. Les systèmes NoSQL sont aussi compatibles avec une grande variété de technologies. Celles-ci permettent le stockage de données non structurées, structurées, semi-structurées ou encore polymorphiques.
+
+La principale caractéristique des systèmes de base de données non relationnelle est qu'ils ne suivent pas un modèle relationnel. Ils ne présentent pas non plus de tableaux sous forme de colonnes fixes. Les bases NoSQL ne nécessitent donc pas de mapping relationnel ni de normalisation de données. L'autre particularité des bases de données NoSQL est l'absence ou la flexibilité des schémas. En effet, le schéma des données n'a pas besoin d'être défini et les données des différentes structures peuvent être rassemblées sur un même système.
+
+                                                                              EXEMPLE DE BASE DE DONNEES NOSQL
+
+Parmi les systèmes de base de données les plus utilisés, on peut citer :
+
+MongoDB : database NoSQL open source orientée document. En d'autres termes, ce système utilise des documents de type JSON pour sauvegarder des données,
+Redis : c'est sans doute la plus populaire des bases de données clé/valeur,
+Cassandra : il s'agit d'un système de stockage développé par Facebook pour le traitement des grandes quantités de données structurées comme Big Data.
+On peut également ajouter l'Oracle NoSQL Database Cloud Service qui aide à gérer les modèles de base de données clé/valeur.
+
+                                                                              C'EST QUOI MONGODB?
+
+MongoDB est une base de données NoSQL orientée document. Elle se distingue des bases de données relationnelles par sa flexibilité et ses performances.
+Apparue au milieu des années 2000, MongoDB est une base de données NoSQL orientée document. Elle est utilisée pour le stockage de volumes massifs de données.
+
+Contrairement à une base de données relationnelle SQL traditionnelle, MongoDB ne repose pas sur des tableaux et des colonnes. Les données sont stockées sous forme de collections et de documents.
+
+Les documents sont des paires de valeurs / clés servant d’unité de données de base. Les collections quant à elles contiennent des ensembles de documents et de fonctions. Elles sont l’équivalent des tableaux dans les bases de données relationnelles classiques.
+
+                                                                           LES CARATERISTIQUES DE MongoDB
+Chaque base de données MongoDB contient des collections, contenant elles-même des documents. Chaque document est différent et peut comporter un nombre de champs variable. La taille et le contenu de chaque document varient également.
+
+La structure d’un document correspond à la façon dont les développeurs construisent leurs classes et objets dans le langage de programmation utilisé. En général, les classes ne sont pas de lignes et des colonnes mais ont une structure claire composée de paires de valeurs / clés.
+
+Les documents n’ont pas de schéma prédéfini et des champs peuvent être ajoutés à volonté. Le modèle de données disponible au sein de MongoDB permet de représenter des relations hiérarchiques ou autre structure complexe plus facilement.
+
+Une autre caractéristique majeure de MongoDB est l’élasticité de ses environnements. De nombreuses entreprises ont des clusters de plus de 100 noeuds pour des bases de données contenant des millions de documents.
+
+                                                                          L'architecture MongoDB et ses composants
+L’architecture MongoDB repose sur plusieurs composants principaux. Tout d’abord,  » _id  » est un champ requis pour chaque document. Il représente une valeur unique, et peut être considéré comme la clé principale du document permettant de l’identifier au sein de la collection.
+
+Un document est l’équivalent d’un enregistrement dans une base de données traditionnelle. Il est constitué de champs de nom et de valeurs. Chaque champ est une association entre un nom et une valeur, et s’apparente à une colonne dans une base de données relationnelle.
+
+Une collection est un groupe de documents MongoDB, et correspond à un tableau créé avec n’importe quel autre RDMS comme Oracle ou MS SQL sur une base de données relationnelle. Elle n’a pas de structure prédéfinie.
+
+Une base de données est un conteneur de collections, au même titre qu’un RDMS est un conteneur de tableaux pour les bases de données relationnelles. Chacune a son propre ensemble de fichiers sur le système fichier. Un serveur MongoDB peut stocker de multiples bases de données.
+
+Enfin, le JSON (JavaScript Object Notation) est un format en texte clair pour exprimer les données structurées. Il est pris en charge par de nombreux langages de programmation.
+
+
+                                                                                       C'EST QUOI REDIS?
+
+Le nom Redis vient de Remote Dictionary Server. Ce type de serveur est idéal lorsqu’il est utilisé comme mémoire de données rapide. Le système de gestion de base de données (SGBD) Redis propose également une base de données en mémoire et un système clé-valeur.
+
+Base de données en mémoire : ces bases de données permettent au SGBD d’enregistrer toutes les données directement dans la mémoire vive. Ceci permet des délais d’accès très courts – même en cas de grands volumes de données non structurées.
+Système clé-valeur : les bases de données clé-valeur séduisent par leur performance élevée et leur possibilité de mise à l’échelle grâce à une structure simple. Une clé permettant de consulter les informations a posteriori est créée pour chaque entrée.
+Dans le cas d’un serveur Redis, toutes les données ne sont donc pas situées sur le disque dur, mais dans la mémoire vive. Du fait de ce choix, Redis est aussi bien une mémoire cache qu’une mémoire vive : Redis ne fait aucune distinction entre les informations stockées dans la base de données durablement ou uniquement à court terme.
+
+Chaque entrée de la base de données se voit attribuer une clé. Elle permet de consulter les données ultérieurement en toute simplicité. Les entrées ne sont donc pas liées les unes aux autres et ne doivent donc pas être interrogées dans plusieurs tableaux. Les informations sont directement disponibles.
+
+Du fait de l’enregistrement dans la mémoire vive, il existe toutefois un risque de perte de l’ensemble des données en cas de panne du serveur. Afin d’éviter cela, Redis peut soit dupliquer régulièrement toutes les données sur un disque dur de sauvegarde soit enregistrer toutes les commandes nécessaires à une reconstruction dans un fichier journal.
+
+Avec Redis, les données sont structurées en strings, c’est-à-dire des suites de caractères simples. Les clés (qui constituent une partie du système clé-valeur) sont également réalisées sous la forme de strings. Le système peut toutefois également supporter d’autres structures de données :
+
+strings : une suite de caractères d’une taille maximale de 512 Mo
+hashes : une entrée avec plusieurs champs
+lists : un ensemble de strings triés par ordre de saisie
+sets : un ensemble de strings non triés
+sorted sets : un ensemble de strings triés par l’utilisateur
+bitmaps : un ensemble d’opérations au niveau des bits
+HyperLogLogs : une estimation basée sur des valeurs précises
+Streams : une liste de strings ou de paires clé-valeur complexes
+Comme Redis est en open source, de nombreux développeurs travaillent à des extensions de ce SGBD. Ces modules étendent les fonctionnalités de cette base de données normalement très minimaliste et permettent d’ajuster le logiciel pour des domaines d’utilisation spécifiques.
+
+
+                                                                        LES AVANTAGE DES BASES DE DONNEES NOSQL
+
+Comme la plupart des bases de données distribuées, NoSQL offre la possibilité de stocker les données sur différents serveurs en local ou en Cloud. Il s'agit d'un des principaux points forts de NoSQL. Le Cloud aide en effet à mettre à disposition des utilisateurs une plus grande quantité de serveurs, ceci à un prix relativement faible.
+
+Idéales pour le stockage et l'analyse du Big Data, les bases de données NoSQL permettent aussi d'éviter un point de défaillance unique. Elles facilitent ainsi la réplication des données sur plusieurs serveurs. Cela offre la possibilité de diminuer la latence et la charge de travail des data centers pour les utilisateurs. Cette « disponibilité » de la donnée garantit au NoSQL toute sa performance et la possibilité d'une scalabilité horizontale.
+
+De plus, les bases de données NoSQL sont capables de prendre en charge les données non structurées et les données structurées de la même façon. Cette capacité de NoSQL à s'adapter à tous les types de data lui confère sa grande flexibilité. Pour utiliser les données, le Data Scientist n'a plus besoin de les structurer, de les ranger puis de les extraire. Elles sont directement exploitables, ce qui aide à développer de façon agile et rapide des logiciels ou des applications web.
+
+Contrairement au SQL qui reste avant tout un langage de programmation de requête, les interfaces de support offrent une utilisation simple et une parfaite lisibilité. Son interface est très ergonomique, ce qui aide les Data Scientists et les Data Analysts à travailler de manière rapide et efficace.
+
+                                                                      Les INCONVENIENT DES BASES DE DONNEES NoSQL
+Malgré ses multiples avantages, l'utilisation des bases de données NoSQL apporte néanmoins quelques inconvénients. L'un des principaux points faibles de cet outil de stockage de données est l'absence de règles de standardisation. En effet, les données sont dénormalisées, mais elles traitent également avec des enregistrements sur les serveurs, contrairement au SQL qui fonctionne par référencement. C'est notamment le cas des documents lorsqu'il s'agit du type de données orientées document.
+
+Il s'agit d'un problème majeur que rencontre cet outil, car la plupart des utilisateurs optent pour des données normalisées afin d'éviter les anomalies et les duplications de données. Si l'on prend par exemple le cas des transactions financières, elles utilisent des règles de normalisation très strictes. L'utilisation de données non normalisées est susceptible d'entrainer un risque d'erreur dans les transactions. Cela pourrait avoir un impact très grave pour les utilisateurs de NoSQL.
+
+NoSQL fonctionne également parfaitement sur une table, mais est vite limité lorsqu'il s'agit de manipuler plusieurs tables. Cet outil est en effet incapable d'effectuer des jointures complexes. La base de données NoSQL est enfin incapable d'imbriquer les requêtes WHERE pour extraire des informations spécifiques dans la database. Ce n'est pas le cas avec SQL.
+
+
+
+                                                                                LES BASES DE DONNEES SQL
+L’histoire de SQL commence en 1969, lorsque le chercheur d’IBM Edgar F.Codd définit le modèle de base de données relationnelle. Ce modèle repose sur l’association de  » clés  » avec diverses données. Par exemple, un nom d’utilisateur peut être associé à un vrai nom et à un numéro de téléphone.
+
+Quelques années plus tard, IBM crée un langage pour les systèmes de gestion de bases de données relationnelles en se basant sur les travaux de Codd. Ce langage s’appellera d’abord SEQUEL, pour  » Structured English Query Language « . Après plusieurs implémentations et révisions, il s’appellera finalement SQL.
+
+Les tests débutent en 1978, puis IBM commence à développer des produits commerciaux comme SQL/DS en 1981 et DB2 en 1983. D’autres vendeurs suivront, comme Sybase, Ingres, ou Oracle qui lance son premier produit en 1979.
+
+
+                                                                         EXEMPLES DE BASES DE DONNEES SQL
+
+                                                                             PUBS
+   Pubs est la base de données « exemple » originale, incluse avec SQL Server. Ce modèle a été développé à l'origine par Sybase et a été intégré à SQL Server dans le cadre de son partenariat avec Microsoft. Pubs reprend les caractéristiques d’une société d'édition qui trace les livres, les auteurs et les ventes.
+
+Pubs était inclus avec SQL Server jusqu'à la version 2005 du serveur de base de données et a été initialement proposé dans le cadre du processus d'installation.
+
+Au fil du temps, cet exemple a été jugé trop restreint et trop simple pour constituer un bon échantillon. De plus, selon certains utilisateurs, l'exemple d'une maison d'édition fictive ne reflétait pas fidèlement les besoins de vrais clients.
+
+                                                                               NORTHWIND
+Imaginant un exemple plus réaliste pour SQL Server, Microsoft est  donc passé à  Northwind. Northwind a été développé à l'origine par l'équipe Access, et Microsoft l'a inclus dans la version 2000 de SQL Server. La base de données Northwind reprend les caractéristiques d’une société d’import-export d'aliments appelée Northwind Traders.
+
+Mais comme avec Pubs, Northwind a été retiré de SQL Server avec sa version 2005.
+
+En revanche, ces modèles Pubs et Northwind sont toujours disponibles en téléchargement pour SQL Server 2000. L'exécution du fichier d'installation extrait les scripts de la base de données dans le dossier par défaut : C:\SQL Server 2000 Exemples de bases de données. L'exécution des scripts T-SQL depuis SQL Server Management Studio ou SQLCMD crée ces bases de données. Les scripts ont quelques incompatibilités mineures avec les versions récentes de SQL Server, mais cela peut être facilement corrigé.
+
+                                                                           LES AVANTAGES DES BASES DE DONNEES SQL
+
+Le gros avantage de SQL réside dans le fait qu’il s’agit d’un langage de programmation standard. En d’autres termes, il est utilisé par de nombreux systèmes de gestion de base de données, ce qui veut dire que vous pouvez utiliser les mêmes commandes et requêtes avec différents systèmes de gestion de bases de données. Aussi, rappelons que SQL est particulièrement facile à apprendre et à prendre en main, à la différence d’autres langages de programmation, même si vous n’avez pas de connaissances en programmation.
+
+Autre avantage : SQL est très puissant et permet de travailler avec des bases de données de manière très précise et ciblée. Vous pouvez utiliser des clauses « Où » pour filtrer les enregistrements, des jointures pour combiner des données de plusieurs tableaux, et des fonctions d’agrégation pour effectuer des calculs sur les données. En outre, SQL est largement utilisé dans les applications Web, ce qui signifie qu’il est facile de trouver de l’aide et de la documentation en ligne.
+
+
+                                                                          LES INCONVENIENTS DES BASES DE DONNEES SQL
+
+Le langage de programmation parfait n’existe pas, et SQL n’échappe pas à la règle. Malgré tous ses avantages, ce langage a aussi ses inconvénients, au premier rang desquels le fait qu’il est principalement destiné aux bases de données relationnelles. Par conséquent, il peut être moins adapté à d’autres types de bases de données, notamment les bases de données NoSQL. De plus, SQL peut s’avérer moins performant que d’autres langages de programmation lorsqu’il est utilisé pour gérer de très grandes bases de données ou pour effectuer des calculs complexes. Enfin, si vous avez besoin de traiter des données non structurées ou de réaliser des calculs complexes en temps réel, d’autres langages de programmation peuvent être plus adaptés.
+
+
+
+
+
+
+
